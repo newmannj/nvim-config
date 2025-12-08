@@ -1,1 +1,1 @@
-vim.lsp.enable { 'basedpyright', 'vtsls' }
+vim.lsp.enable { 'basedpyright', 'vtsls', 'eslint' }

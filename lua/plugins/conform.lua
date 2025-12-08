@@ -1,7 +1,7 @@
 return {
   'stevearc/conform.nvim',
   opts = {
-    format_on_save = { async = true, lsp_format = 'fallback' },
+    format_on_save = { timeout = 500, lsp_format = 'fallback' },
     formatters_by_ft = {
       lua = { 'stylua' },
       python = { 'ruff_fix', 'ruff_format' },
