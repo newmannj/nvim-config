@@ -30,7 +30,7 @@ return {
       useFlatConfig = false,
     },
     codeActionOnSave = {
-      enable = false,
+      enable = true,
       mode = 'all',
     },
     format = true,
