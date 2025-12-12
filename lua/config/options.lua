@@ -84,7 +84,6 @@ opt.list = true -- Show some invisible characters (tabs...
 opt.listchars = { tab = '» ', trail = '·', nbsp = '␣' }
 opt.mouse = 'a' -- Enable mouse mode
 opt.number = true -- Print line number
-opt.pumblend = 10 -- Popup blend
 opt.pumheight = 10 -- Maximum number of entries in a popup
 opt.relativenumber = true -- Relative line numbers
 opt.ruler = false -- Disable the default ruler
