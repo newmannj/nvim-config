@@ -13,5 +13,8 @@ return {
     vim.keymap.set('n', 'grr', function()
       extra.pickers.lsp { scope = 'references' }
     end, { desc = '[G]o to [r]eferences' })
+    vim.keymap.set('n', 'grd', function()
+      extra.pickers.lsp { scope = 'definition' }
+    end, { desc = '[G]o to [d]efinition' })
   end,
 }
