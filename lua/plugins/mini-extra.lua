@@ -1,5 +1,6 @@
 return {
   'nvim-mini/mini.extra',
+  tag = 'v0.16.0',
   version = '*',
   dependencies = { 'nvim-mini/mini.pick' },
   config = function()
