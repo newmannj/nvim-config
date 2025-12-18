@@ -16,5 +16,12 @@ return {
     vim.keymap.set('n', 'grd', function()
       extra.pickers.lsp { scope = 'definition' }
     end, { desc = '[G]o to [d]efinition' })
+    vim.api.nvim_set_hl(0, 'MiniPickSelection', {
+      link = 'Visual',
+    })
+
+    vim.api.nvim_set_hl(0, 'MiniPickMatchCurrent', {
+      link = 'CursorLine',
+    })
   end,
 }
