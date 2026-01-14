@@ -6,3 +6,22 @@ vim.api.nvim_create_autocmd('TextYankPost', {
     vim.hl.on_yank()
   end,
 })
+
+vim.api.nvim_create_autocmd('BufWritePre', {
+  callback = function()
+    local clients = vim.lsp.get_active_clients { bufnr = 0 }
+    for _, client in ipairs(clients) do
+      if client.name == 'eslint' then
+        vim.lsp.buf.code_action {
+          apply = true,
+          context = {
+            only = {
+              'source.fixAll.eslint',
+            },
+          },
+        }
+        return
+      end
+    end
+  end,
+})

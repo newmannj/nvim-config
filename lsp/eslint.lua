@@ -33,7 +33,7 @@ return {
       enable = true,
       mode = 'all',
     },
-    format = true,
+    format = false,
     quiet = false,
     onIgnoredFiles = 'off',
     rulesCustomizations = {},
