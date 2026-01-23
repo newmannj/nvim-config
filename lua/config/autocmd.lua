@@ -25,3 +25,12 @@ vim.api.nvim_create_autocmd('BufWritePre', {
     end
   end,
 })
+
+vim.api.nvim_create_autocmd('LspAttach', {
+  group = vim.api.nvim_create_augroup('lsp-attach', { clear = true }),
+  callback = function(args)
+    fzf = require 'fzf-lua'
+    vim.keymap.set('n', 'grd', fzf.lsp_definitions, { desc = '[G]o to [d]efinitions' })
+    vim.keymap.set('n', 'grr', fzf.lsp_references, { desc = '[G]o to [r]eferences' })
+  end,
+})
