@@ -9,6 +9,15 @@ return {
         max_height = 30,
         border = 'rounded',
       },
+      view_options = {
+        is_hidden_file = function(name, bufnr)
+          local m = name:match '^%.'
+          return m ~= nil and name ~= '.env'
+        end,
+        is_always_hidden = function(name, bufnr)
+          return name == '__pycache__' or name == 'node_modules'
+        end,
+      },
       keymaps = {
         ['<Esc><Esc>'] = 'actions.close',
       },

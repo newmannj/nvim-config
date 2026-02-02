@@ -4,11 +4,7 @@ return {
   config = function()
     local fzf = require 'fzf-lua'
 
-    fzf.setup {
-      files = {
-        no_ignore = true,
-      },
-    }
+    fzf.setup {}
 
     -- Regular searching
     vim.keymap.set('n', '<leader>ff', fzf.files, { desc = '[F]ind [f]iles' })
