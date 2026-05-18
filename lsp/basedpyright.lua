@@ -32,6 +32,7 @@ return {
           './.venv',
           './venv',
           './.git',
+          './.claude',
         },
         ignore = { '*' },
         indexing = false,
