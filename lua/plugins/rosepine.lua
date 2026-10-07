@@ -4,6 +4,9 @@ return {
   lazy = false,
   priority = 1000,
   config = function()
-    vim.cmd.colorscheme 'rose-pine-moon'
+    require('rose-pine').setup {
+      dark_variant = 'moon',
+    }
+    vim.cmd.colorscheme 'rose-pine'
   end,
 }

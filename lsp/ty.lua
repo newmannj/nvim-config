@@ -9,6 +9,9 @@ return {
   single_file_support = true,
   settings = {
     ty = {
+      configuration = {
+        environment = { root = { 'backend' } },
+      },
       diagnosticMode = 'off',
     },
   },
